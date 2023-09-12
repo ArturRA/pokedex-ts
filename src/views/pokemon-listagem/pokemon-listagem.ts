@@ -45,6 +45,10 @@ export class PokemonListagem {
     const cardPokemon = document.createElement('div');
     cardPokemon.classList.add('card-pokemon');
 
+    cardPokemon.addEventListener('click', (sender) => {
+      window.location.href = `pokemon-detalhes.html?nome=${pokemon.nome}`
+    })
+    
     cardPokemon.appendChild(id);
     cardPokemon.appendChild(imagem);
     cardPokemon.appendChild(nomePokemon);
